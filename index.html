@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+       <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>
+        js-variables
+    </title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body onload="Var()">
+   
+        <div class="top">
+            
+
+            <h1><u><marquee> JavaScript variables.</marquee></u></h1>
+        
+        </div>
+            <ul>
+                <li><h3>There're 4 ways to declaring a JavaScript variables</h3></li>
+                </li></ul>
+                <ol>
+                    <li>
+                        Using var
+                    </li>
+                    <li>
+                        Using let
+                    </li>
+                    <li>
+                        Using const             
+                    </li>
+                    <li>
+                        Using nothing
+                    </li>
+                </ol>
+                    <ul>
+                        <li><h2>
+                                Examples:
+                            </h2></li>
+                    </ul> 
+                    <ul><li id="code-header"></li></ul>
+            <div class="code">
+                
+                <p id="addition"></p>
+                </div><p id="output" class="op"></p>
+             <h3 id="explain">></h3>
+            
+             
+    <h1>
+        <ul><li>Tap to see more details:</li></ul>
+
+        </h1>
+    <a onclick="Var()" class="btn">Using var</a><br><br>
+    <a onclick="Let()" class="btn">Using let </a><br><br>
+    <a onclick="Const()" class="btn">Using const </a>
+ 
+
+    <script>
+        function Var()
+        {
+            document.getElementById("code-header").innerHTML="Using var";
+            document.getElementById("addition").innerHTML='var a=5;<br>var b=6;<br>var d = a + b;>';
+            var a=5;
+            var b=6;
+            var c=a+b;
+            document.getElementById("output").innerHTML=c;
+            document.getElementById("explain").innerHTML="<ul><li>Variables are containers for storing data (storing data values).</li><br><li>In this example, a, b, and c, are variables, declared with the var keyword:</li></ul>";
+    }
+    function Let()
+    {
+        document.getElementById("code-header").innerHTML="Using let";
+        document.getElementById("addition").innerHTML='let x=5;<br>let y=6;<br>let z = x - y;';
+        let x=5;
+        let y=6;
+        let z=x-y;
+        document.getElementById("output").innerHTML=z;
+        document.getElementById("explain").innerHTML="<ul><li>let allows you to declare variables that are limited to the scope of a block statement,</li><br><li> or expression on which it is used, unlike the var keyword,</li><br><li> which declares a variable globally, or locally to an entire function regardless of block scope.</li></ul";
+    }
+    function Const()
+    {
+        document.getElementById("code-header").innerHTML="Using const";
+        document.getElementById("addition").innerHTML='const u=5;<br>const v=6;<br> w = u * v;';
+        const u=5;
+        const v=6;
+        w =u*v;
+        document.getElementById("output").innerHTML=w;
+        document.getElementById("explain").innerHTML="<ul><li>If you want a general rule: always declare variables with const.</li><br><li>If you think the value of the variable can change, use let.</li><br><li>In this example, u, v, and w, are variables:</li></ul>";
+    }
+   
+    
+    </script>
+</body>
+</html>
